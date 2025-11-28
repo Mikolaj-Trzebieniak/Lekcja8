@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ćwiczenie z jQuery - selektory</title>
+    <!-- Dołączamy jQuery z CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Klasa do powiększania czcionki */
+        .powieksz {
+            font-size: 24px;
+        }
+    </style>
+
+    <script>
+        // Kod jQuery
+        $(document).ready(function () {
+            // 1. Wybierz wszystkie akapity i zmień im kolor tekstu na niebieski
+            $("p").css("color", "blue");
+
+            // 2. Za pomocą selektora ID zmień kolor pierwszego nagłówka
+            $("#pierwszyNaglowek").css("color", "red");
+
+            // 3. Za pomocą selektora klasy powiększ czcionkę wybranych elementów
+            $(".powieksz").css("font-size", "24px");
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Nagłówki -->
+    <h1 id="pierwszyNaglowek">To jest nagłówek H1</h1>
+    <h2 class="powieksz">To jest nagłówek H2</h2>
+
+    <!-- Akapity -->
+    <p>Pierwszy akapit – jego tekst będzie na niebiesko.</p>
+    <p class="powieksz">Drugi akapit – będzie niebieski i powiększony.</p>
+    <p>Trzeci akapit – tylko niebieski.</p>
+
+    <!-- Lista -->
+    <ul>
+        <li class="powieksz">Pierwszy element listy (powiększony).</li>
+        <li>Drugi element listy.</li>
+        <li>Trzeci element listy.</li>
+    </ul>
+
+</body>
+</html>
